@@ -1,8 +1,8 @@
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ClinicBanner from "@/components/ClinicBanner";
-import WhyDifferent from "@/components/WhyDifferent";
+import Courses from "@/components/Courses";
+import Registration from "@/components/Registration";
 import News from "@/components/News";
 import Professors from "@/components/Professors";
 import Stats from "@/components/Stats";
@@ -16,8 +16,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ClinicBanner />
-        <WhyDifferent />
+        <Courses />
+        <Registration />
         <News />
         <Professors />
         <Stats />

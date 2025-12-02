@@ -16,16 +16,21 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl animate-fade-up">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
-            Pós-graduação presencial referência em{" "}
-            <span className="text-gradient">Saúde e Estética</span>
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+            Pós-graduação de excelência em{" "}
+            <span className="text-primary-foreground font-bold">Saúde e Estética</span>
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl mb-8 leading-relaxed">
-            Professores que são destaque nas principais instituições de Santa Catarina.
+          <p className="text-primary-foreground/80 text-lg md:text-xl mb-8 leading-relaxed">
+            Instituto IBEM - Formando profissionais de destaque com os melhores especialistas do mercado.
           </p>
-          <Button variant="hero" size="xl">
-            Conheça nossos cursos
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button variant="default" size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
+              <a href="#cursos">Conheça nossos cursos</a>
+            </Button>
+            <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+              <a href="#inscricao">Inscreva-se</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
