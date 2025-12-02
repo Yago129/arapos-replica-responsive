@@ -1,18 +1,16 @@
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Courses from "@/components/Courses";
 
-const Index = () => {
+const Cursos = () => {
   return (
     <div className="min-h-screen bg-background">
       <TopBar />
       <Header />
-      <main>
-        <Hero />
-        <Stats />
+      <main className="pt-8">
+        <Courses />
       </main>
       <Footer />
       <WhatsAppButton />
@@ -20,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Cursos;

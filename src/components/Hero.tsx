@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -25,10 +26,10 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="default" size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
-              <a href="#cursos">Conheça nossos cursos</a>
+              <Link to="/cursos">Conheça nossos cursos</Link>
             </Button>
             <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <a href="#inscricao">Inscreva-se</a>
+              <Link to="/inscricao">Inscreva-se</Link>
             </Button>
           </div>
         </div>

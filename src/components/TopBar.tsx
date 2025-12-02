@@ -1,4 +1,5 @@
 import { Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
@@ -25,9 +26,9 @@ const TopBar = () => {
             <MessageCircle className="w-5 h-5" />
           </a>
         </div>
-        <a href="#inscricao" className="text-primary-foreground text-sm font-semibold hover:opacity-80 transition-opacity uppercase tracking-wide">
+        <Link to="/inscricao" className="text-primary-foreground text-sm font-semibold hover:opacity-80 transition-opacity uppercase tracking-wide">
           Garanta sua vaga, clique aqui
-        </a>
+        </Link>
       </div>
     </div>
   );
