@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { label: "Ibem", href: "#" },
-    { label: "Cursos", href: "#cursos" },
-    { label: "Inscrição", href: "#inscricao" },
-    { label: "Novidades", href: "#novidades" },
-    { label: "Corpo Docente", href: "#docentes" },
+    { label: "Início", href: "/" },
+    { label: "Cursos", href: "/cursos" },
+    { label: "Inscrição", href: "/inscricao" },
+    { label: "Novidades", href: "/novidades" },
+    { label: "Corpo Docente", href: "/docentes" },
   ];
 
   return (
@@ -18,7 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="flex items-center">
               <svg className="w-10 h-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
                 <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -29,25 +31,29 @@ const Header = () => {
                 <span className="block text-[10px] text-muted-foreground tracking-widest uppercase">Instituto de Pós-Graduação</span>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium"
+                to={item.href}
+                className={`transition-colors text-sm font-medium ${
+                  location.pathname === item.href 
+                    ? "text-primary" 
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button variant="default" size="lg" asChild>
-              <a href="#inscricao">Inscreva-se Agora</a>
+              <Link to="/inscricao">Inscreva-se Agora</Link>
             </Button>
           </div>
 
@@ -65,17 +71,21 @@ const Header = () => {
           <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm font-medium"
+                  to={item.href}
+                  className={`transition-colors text-sm font-medium ${
+                    location.pathname === item.href 
+                      ? "text-primary" 
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <Button variant="default" className="mt-2" asChild>
-                <a href="#inscricao">Inscreva-se Agora</a>
+                <Link to="/inscricao">Inscreva-se Agora</Link>
               </Button>
             </div>
           </nav>

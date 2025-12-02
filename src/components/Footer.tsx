@@ -1,4 +1,5 @@
 import { Instagram, Youtube, MessageCircle, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,11 +27,11 @@ const Footer = () => {
           <div>
             <h4 className="text-primary-foreground font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Sobre o IBEM</a></li>
-              <li><a href="#cursos" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Cursos</a></li>
-              <li><a href="#inscricao" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Inscrição</a></li>
-              <li><a href="#novidades" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Novidades</a></li>
-              <li><a href="#docentes" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Corpo Docente</a></li>
+              <li><Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Início</Link></li>
+              <li><Link to="/cursos" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Cursos</Link></li>
+              <li><Link to="/inscricao" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Inscrição</Link></li>
+              <li><Link to="/novidades" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Novidades</Link></li>
+              <li><Link to="/docentes" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">Corpo Docente</Link></li>
             </ul>
           </div>
 

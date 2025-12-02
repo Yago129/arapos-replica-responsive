@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GraduationCap, Stethoscope, Sparkles, Brain } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const courseCategories = [
   {
@@ -85,12 +86,12 @@ const Courses = () => {
                     <h3 className="font-serif text-xl text-foreground mb-2">{course.name}</h3>
                     <p className="text-primary font-medium text-sm mb-3">{course.duration}</p>
                     <p className="text-muted-foreground text-sm">{course.description}</p>
-                    <a 
-                      href="#inscricao" 
+                    <Link 
+                      to="/inscricao" 
                       className="inline-block mt-4 text-primary hover:underline text-sm font-medium"
                     >
                       Inscreva-se →
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
