@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 const newsItems = [
   {
     id: 1,
-    title: "Uma nova experiência de atualização no Instituto ARA",
-    excerpt: "Instituto ARA lança iniciativa de workshops gratuitos voltada ao desenvolvimento contínuo e à prática responsável na estética e saúde...",
+    title: "Uma nova experiência de atualização no Instituto IBEM",
+    excerpt: "Instituto IBEM lança iniciativa de workshops gratuitos voltada ao desenvolvimento contínuo e à prática responsável na estética e saúde...",
     date: "8 de nov.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop"
   },

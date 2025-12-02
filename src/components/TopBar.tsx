@@ -25,7 +25,7 @@ const TopBar = () => {
             <MessageCircle className="w-5 h-5" />
           </a>
         </div>
-        <a href="#cursos" className="text-primary-foreground text-sm font-semibold hover:opacity-80 transition-opacity uppercase tracking-wide">
+        <a href="#inscricao" className="text-primary-foreground text-sm font-semibold hover:opacity-80 transition-opacity uppercase tracking-wide">
           Garanta sua vaga, clique aqui
         </a>
       </div>

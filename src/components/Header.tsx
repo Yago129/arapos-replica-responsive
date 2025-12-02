@@ -6,11 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "ARA", href: "#" },
-    { label: "Corpo Docente", href: "#docentes" },
+    { label: "Ibem", href: "#" },
     { label: "Cursos", href: "#cursos" },
+    { label: "Inscrição", href: "#inscricao" },
     { label: "Novidades", href: "#novidades" },
-    { label: "Clínica Escola", href: "#clinica" },
+    { label: "Corpo Docente", href: "#docentes" },
   ];
 
   return (
@@ -20,12 +20,12 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="flex items-center">
-              <svg className="w-8 h-8 text-primary" viewBox="0 0 40 40" fill="currentColor">
-                <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" fill="none"/>
-                <path d="M12 28L20 12L28 28H12Z" fill="currentColor"/>
+              <svg className="w-10 h-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <text x="20" y="27" textAnchor="middle" fontSize="16" fontWeight="bold" fill="currentColor">IB</text>
               </svg>
               <div className="ml-2">
-                <span className="text-foreground font-serif text-2xl font-bold tracking-wider">ARA</span>
+                <span className="text-foreground font-serif text-2xl font-bold tracking-wider">IBEM</span>
                 <span className="block text-[10px] text-muted-foreground tracking-widest uppercase">Instituto de Pós-Graduação</span>
               </div>
             </div>
@@ -46,8 +46,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="outline" size="lg">
-              HOF e Cirurgias - exclusivo ODONTO
+            <Button variant="default" size="lg" asChild>
+              <a href="#inscricao">Inscreva-se Agora</a>
             </Button>
           </div>
 
@@ -74,8 +74,8 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant="outline" className="mt-2">
-                HOF e Cirurgias - exclusivo ODONTO
+              <Button variant="default" className="mt-2" asChild>
+                <a href="#inscricao">Inscreva-se Agora</a>
               </Button>
             </div>
           </nav>
